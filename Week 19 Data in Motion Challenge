@@ -1,0 +1,165 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNhlxczrvZE854KmoOs/jr5",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mythilyram/Python/blob/main/Week%2019%20Data%20in%20Motion%20Challenge\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "url='https://raw.githubusercontent.com/kedeisha1/Challenges/main/coaster_db.csv' \n",
+        "c=pd.read_csv(url)"
+      ],
+      "metadata": {
+        "id": "4zFGu2XBxtgY"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# How many columns and rows are in the dataset?\n",
+        "c.shape"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Zc_uhH6QyN83",
+        "outputId": "2a17c98f-a945-495d-f1d5-1ddcc08e711e"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "(1087, 56)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Is there any missing data?\n",
+        "c.isna().sum()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XIZQ29G_yhlL",
+        "outputId": "d8b688f6-7871-4a0c-e12f-e357ff8e6c48"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "coaster_name                        0\n",
+              "Length                            134\n",
+              "Speed                             150\n",
+              "Location                            0\n",
+              "Status                            213\n",
+              "Opening date                      250\n",
+              "Type                                0\n",
+              "Manufacturer                       59\n",
+              "Height restriction                256\n",
+              "Model                             343\n",
+              "Height                            122\n",
+              "Inversions                        155\n",
+              "Lift/launch system                292\n",
+              "Cost                              705\n",
+              "Trains                            369\n",
+              "Park section                      600\n",
+              "Duration                          322\n",
+              "Capacity                          512\n",
+              "G-force                           725\n",
+              "Designer                          509\n",
+              "Max vertical angle                730\n",
+              "Drop                              593\n",
+              "Soft opening date                 991\n",
+              "Fast Lane available              1018\n",
+              "Replaced                          914\n",
+              "Track layout                      752\n",
+              "Fastrack available               1068\n",
+              "Soft opening date.1               991\n",
+              "Closing date                      851\n",
+              "Opened                           1060\n",
+              "Replaced by                       999\n",
+              "Website                          1000\n",
+              "Flash Pass Available             1037\n",
+              "Must transfer from wheelchair     981\n",
+              "Theme                            1043\n",
+              "Single rider line available      1006\n",
+              "Restraint Style                  1065\n",
+              "Flash Pass available             1041\n",
+              "Acceleration                     1027\n",
+              "Restraints                       1063\n",
+              "Name                             1052\n",
+              "year_introduced                     0\n",
+              "latitude                          275\n",
+              "longitude                         275\n",
+              "Type_Main                           0\n",
+              "opening_date_clean                250\n",
+              "speed1                            150\n",
+              "speed2                            152\n",
+              "speed1_value                      150\n",
+              "speed1_unit                       150\n",
+              "speed_mph                         150\n",
+              "height_value                      122\n",
+              "height_unit                       122\n",
+              "height_ft                         916\n",
+              "Inversions_clean                    0\n",
+              "Gforce_clean                      725\n",
+              "dtype: int64"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#  Display the summary statistics of the numeric columns using the describe method."
+      ],
+      "metadata": {
+        "id": "z_0731IlyyCt"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
